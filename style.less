@@ -8,25 +8,37 @@
 
 .content {
   position: relative;
-  overflow: hidden;
   height: 100vh;
 }
 
 .main-screen {
   position: relative;
   padding: 0 93px;
-  height: 100vh;
-  overflow: hidden;
+  border: 1px solid #213c51;
+  min-height: 100vh;
   background: url("img/background/background-main-container.png") no-repeat top center fixed;
   background-size: cover;
 }
 
-.main-container {
+.block-advertisings {
   position: relative;
-  display: block;
-  padding: 98px 0 0;
-  border: 1px solid silver;
+  text-align: center;
+  padding: 0 93px;
+  clear: both;
   min-height: 100vh;
+  background: url("img/background/background-advertising.png") no-repeat top center fixed;
+  background-size: cover;
+}
+
+.main-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  overflow: hidden;
+  padding: 98px 0 0;
+  border: 1px solid #213c51;
   text-align: center;
   background: url("img/background/background-main-container.png") no-repeat top center fixed;
   background-size: cover;
@@ -41,7 +53,6 @@
   text-align: center;
   z-index: 10;
   clear: both;
-  background: linear-gradient(0deg, rgba(42, 85, 92, 0.01), #2a555c);
   i {
     color: #fff;
   }
@@ -310,6 +321,10 @@
     font-size: 32px;
     color: #4a6165;
   }
+  a {
+    text-decoration: none;
+    color: #fff;
+  }
 }
 
 .logo {
@@ -338,6 +353,140 @@
     line-height: 7px;
     padding: 15px 14px 17px;
     font-weight: 900;
+  }
+}
+
+.left-button-advertising {
+  display: inline-block;
+  position: fixed;
+  left: 5vw;
+  top: 50vh;
+  z-index: 15;
+  cursor: pointer;
+}
+
+.right-button-advertising {
+  display: inline-block;
+  position: fixed;
+  right: 5vw;
+  top: 50vh;
+  z-index: 15;
+  cursor: pointer;
+}
+
+.dosage-form {
+  width: 89%;
+  margin: auto;
+  li {
+    display: block;
+    text-align: left;
+    font-size: 29px;
+    margin-left: 96px;
+    margin-bottom: 33px;
+    font-weight: 900;
+    list-style: none;
+    color: #c395c9;
+  }
+  p {
+    font-family: "PT Sans", arial;
+    color: #fff;
+    font-size: 29px;
+  }
+}
+
+.introducing-bravecto {
+  background: #5c1a7c;
+  color: #fffde1;
+  margin: 65px 130px 0 180px;
+  h2 {
+    font-size: 31px;
+    padding-top: 3px;
+    margin-bottom: 28px;
+  }
+  p {
+    color: #d1c5d9;
+    font-size: 13.7px;
+    margin-top: 13px;
+  }
+  ul {
+    text-align: center;
+    margin-top: 25px;
+    padding-left: 22px;
+  }
+  li {
+    display: inline-block;
+    list-style: none;
+    font-size: 15px;
+    width: 250px;
+    margin: auto 8px;
+    padding-bottom: 18px;
+    vertical-align: top;
+    text-align: center;
+  }
+  img {
+    display: block;
+    margin: auto auto 17px auto;
+  }
+}
+
+.bravecto-banner-and-help-in-treatment {
+  background: #fff;
+  height: 350px;
+  margin: 0 130px 65px 180px;
+}
+
+.bravecto-advertisings-main-block {
+  display: inline-block;
+  vertical-align: middle;
+  width: 950px;
+  margin: auto;
+  text-align: left;
+  padding: 240px 10px 45px;
+  h1 {
+    font-family: 'Helvetica Neue LT Cyrillic 35 T';
+    color: #fff;
+    padding-top: 4px;
+    padding-left: 62px;
+    font-size: 70px;
+  }
+  span {
+    display: block;
+    margin-top: 6px;
+    color: #fff;
+    font-weight: 900;
+    font-size: 33px;
+    margin-left: 8px;
+  }
+}
+
+.twelve-week {
+  padding: 28px 20px 0 65px;
+}
+
+.twelve-week-left {
+  display: inline-block;
+  padding-top: 8px;
+}
+
+.twelve-week-right {
+  display: inline-block;
+  padding-left: 20px;
+  h2 {
+    color: #fff;
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 48px;
+  }
+  span {
+    font-size: 28px;
+    font-weight: 400;
+    padding: 0;
+    margin: 0;
+  }
+  p {
+    margin-bottom: 36px;
+    color: #fff;
+    font-size: 27px;
   }
 }
 
@@ -454,17 +603,10 @@
 
 .carousel-full-information-animal {
   display: inline-block;
-  width: 89%;
+  width: 90%;
 }
 
-.left-block-carousel {
-  display: inline-block;
-  width: 5%;
-  cursor: pointer;
-  vertical-align: 33px;
-  text-align: center;
-}
-
+.left-block-carousel,
 .right-block-carousel {
   display: inline-block;
   width: 5%;
@@ -748,7 +890,6 @@
   z-index: 10;
   margin-right: -36px;
   padding: 0 93px 20px;
-  background: linear-gradient(0deg, #2a555c, rgba(42, 85, 92, 0.01));
   ul {
     display: inline-block;
     width: 50%;
@@ -765,13 +906,36 @@
     padding: 5px 0;
   }
   a {
-    text-decoration: none;
+    color: #fff;
+    text-decoration: underline;
   }
 }
 
-.footer li a {
-  color: #fff;
-  text-decoration: underline;
+.footer-static {
+  position: relative;
+  display: block;
+  z-index: 10;
+  margin-right: -36px;
+  padding: 0 93px 20px;
+  ul {
+    display: inline-block;
+    width: 50%;
+    text-align: left;
+    padding: 17px 0;
+  }
+  li {
+    display: inline-block;
+    list-style: none;
+    text-align: left;
+    font-size: 24px;
+    width: 187px;
+    line-height: 25px;
+    padding: 5px 0;
+  }
+  a {
+    color: #fff;
+    text-decoration: underline;
+  }
 }
 
 .search-me-block {
@@ -816,6 +980,47 @@
 
   .full-window-for-search-animal i {
     width: 10%;
+  }
+
+  .bravecto-advertisings-main-block {
+    width: auto;
+    display: block;
+    padding: 150px 10px 0;
+  }
+
+  .bravecto-banner-and-help-in-treatment {
+    padding: 65px 50px;
+    margin: 0 auto;
+    width: 400px;
+  }
+
+  .twelve-week {
+    padding: 20px;
+    text-align: center;
+  }
+
+  .twelve-week-left {
+    text-align: center;
+    img {
+      margin: auto 20px;
+    }
+  }
+
+  .search-me-block {
+    width: 48%;
+    a {
+      margin-left: 22px;
+    }
+  }
+
+  .footer-static {
+    margin-top: 50px;
+  }
+
+  .introducing-bravecto {
+    padding: 65px 50px;
+    margin: 0 auto;
+    width: 400px;
   }
 
   .windows-for-search-animal {
@@ -868,10 +1073,6 @@
     padding: 40px 100px 40px;
   }
 
-  .search-me-block {
-    width: 45%;
-  }
-
   .logo {
     display: none;
   }
@@ -879,7 +1080,8 @@
   .setting-menu {
     margin: 100px 30px 50px;
     li {
-      font-size: 18px;
+      width: 15%;
+      font-size: 75%;
       padding: 5px;
     }
   }
@@ -887,11 +1089,11 @@
   .all-settings-values {
     padding: 0;
     & input:nth-child(-n+6) {
-      width: 240px;
+      width: 210px;
       margin: 5px auto;
     }
     button {
-      width: 240px;
+      width: 80px;
       margin: auto;
     }
   }
@@ -902,26 +1104,28 @@
   }
 
   .block-add-new-animals-and-list-and-maps {
-    text-align: center;
-    padding: 20px;
+    text-align: left;
+    padding: 20px 20px 20px 35px;
     & button:nth-child(-n+6) {
       margin: 10px;
+      vertical-align: middle;
     }
   }
 
-  .left-block-carousel img {
-    width: 30px;
-    height: 30px;
+  .right-block-carousel,
+  .left-block-carousel {
+    vertical-align: top;
   }
 
-  .right-block-carousel img {
-    width: 30px;
-    height: 30px;
+  .right-block-carousel img,
+  .left-block-carousel img {
+    width: 60px;
+    height: 120px;
   }
 
   .list-animals {
     text-align: center;
-    width: 400px;
+    width: 365px;
   }
 
   .right-full-information {
@@ -934,6 +1138,9 @@
 
   .quick-view {
     margin: -150px 10px 99px;
+    p {
+      font-size: 22px;
+    }
   }
 
   .footer {
@@ -958,6 +1165,101 @@
 
   #hide-icon-left, #hide-icon-right {
     display: none;
+  }
+
+  .bravecto-advertisings-main-block {
+    display: block;
+    padding: 100px 0 0;
+    width: auto;
+    h1 {
+      padding: 5px 40px;
+      font-size: 30px;
+    }
+    span {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+  .twelve-week {
+    padding: 18px 40px 10px;
+    text-align: center;
+    h2 {
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .twelve-week-left img {
+    width: 210px;
+    margin: auto 50px;
+  }
+
+  .twelve-week-right {
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 0;
+  }
+
+  .block-advertisings {
+    padding: 150px 30px 10px;
+  }
+
+  .dosage-form {
+    display: block;
+    width: auto;
+    padding: 18px 40px 10px;
+    li {
+      display: block;
+      width: auto;
+      margin: 0 0 25px 0;
+      font-size: 18px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .introducing-bravecto {
+    padding: 18px 40px 10px;
+    margin: 0 auto;
+    ul {
+      padding: 0;
+    }
+    li {
+      width: auto;
+      margin: auto;
+    }
+  }
+
+  .bravecto-banner-and-help-in-treatment {
+    padding: 18px 40px 10px;
+    margin: 0 auto;
+  }
+
+  .footer-static {
+    padding: 100px 40px 10px;
+    margin: 0;
+    text-align: center;
+    ul {
+      display: inline-block;
+      width: 48%;
+      text-align: center;
+      padding: 0;
+    }
+    li {
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+
+  .left-button-advertising img,
+  .right-button-advertising img {
+    width: 25px;
   }
 
   .windows-for-search-animal {
@@ -1039,7 +1341,7 @@
     display: block;
     width: auto;
     text-align: center;
-    margin-top: 13px;
+    margin-top: 0;
     li {
       display: inline-block;
       width: 24%;
@@ -1170,11 +1472,15 @@
   }
 
   .search-me-block {
-    width: 40%;
+    display: inline-block;
+    width: 46%;
     a {
-      width: 35px;
-      height: 35px;
-      margin-left: 6px;
+      width: 32px;
+      height: 33px;
+      margin: auto;
+    }
+    h3 {
+      font-size: 14px;
     }
     i {
       line-height: 35px;
@@ -1227,14 +1533,9 @@
     }
   }
 
-  .left-block-carousel img {
-    width: 30px;
-    height: 30px;
-  }
-
-  .right-block-carousel img {
-    width: 30px;
-    height: 30px;
+  .right-block-carousel,
+  .left-block-carousel {
+    display: none;
   }
 
   .list-animals {
@@ -1264,6 +1565,105 @@
     i {
       font-size: 6em;
     }
+  }
+
+  .bravecto-advertisings-main-block {
+    display: block;
+    padding: 100px 0 0;
+    width: auto;
+    h1 {
+      padding: 5px 40px;
+      font-size: 30px;
+    }
+    span {
+      font-size: 16px;
+      margin: 0;
+    }
+  }
+
+  .twelve-week {
+    padding: 18px 40px 10px;
+    text-align: center;
+    h2 {
+      font-size: 25px;
+      margin-bottom: 5px;
+    }
+    p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+  }
+
+  .twelve-week-left img {
+    width: 150px;
+    margin: auto;
+  }
+
+  .twelve-week-right {
+    text-align: left;
+    padding-top: 15px;
+    padding-left: 0;
+  }
+
+  .block-advertisings {
+    padding: 0 5px;
+  }
+
+  .dosage-form {
+    display: block;
+    width: auto;
+    padding: 18px 40px 10px;
+    li {
+      display: block;
+      width: auto;
+      margin: 0 0 25px 0;
+      font-size: 18px;
+    }
+    p {
+      font-size: 18px;
+    }
+  }
+
+  .introducing-bravecto {
+    display: block;
+    width: auto;
+    padding: 18px 40px 10px;
+    margin: 0 auto;
+    ul {
+      padding: 0;
+    }
+    li {
+      width: auto;
+      margin: auto;
+    }
+  }
+
+  .bravecto-banner-and-help-in-treatment {
+    display: block;
+    width: auto;
+    padding: 18px 40px 10px;
+    margin: 0 auto;
+  }
+
+  .footer-static {
+    padding: 18px 40px;
+    margin: 0;
+    text-align: center;
+    ul {
+      display: block;
+      width: auto;
+      text-align: center;
+      padding: 0;
+    }
+    li {
+      font-size: 14px;
+      text-align: left;
+    }
+  }
+
+  .left-button-advertising img,
+  .right-button-advertising img {
+    width: 25px;
   }
 
   #hide-icon-left, #hide-icon-right {
@@ -1467,9 +1867,10 @@
     h3 {
       padding: 10px;
       margin: 0;
+      font-size: 16px;
     }
     a {
-      margin: 0 10px;
+      margin: 10px auto;
     }
   }
 
